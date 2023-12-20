@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Araba Satış Sitesi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 style="color:#fff">Yıldırım Group Araç  Satış Sitesi</h1>
+      <div>
+        <button class="btn">Giriş Yap</button>
+        <button class="btn">Kaydol</button>
+    </div>
+    </header>
+
+    <div class="container">
+      <!-- Araç ekleme formu -->
+      <div id="addCarForm">
+        <h2>Yeni Araç Ekle</h2>
+        <label for="brand">Marka:</label>
+        <input type="text" id="brand" name="brand" required />
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required />
+
+        <label for="price">Fiyat:</label>
+        <input type="number" id="price" name="price" required />
+
+        <label for="color">Renk:</label>
+        <input type="text" id="color" name="color" required />
+
+        <label for="transmission">Vites Tipi:</label>
+        <select id="transmission" name="transmission" required>
+          <option value="automatic">Otomatik</option>
+          <option value="manual">Manuel</option>
+        </select>
+
+        <label for="fuelType">Yakıt Türü:</label>
+        <input type="text" id="fuelType" name="fuelType" required />
+
+        <label for="imageURL">Resim URL'si:</label>
+        <input type="text" id="imageURL" name="imageURL" required />
+
+        <button onclick="addNewCar()">Araç Ekle</button>
+      </div>
+
+      <!-- Araç listesi -->
+      <div class="car-list" id="carList">
+        <!-- Araçlar burada dinamik olarak eklenecek -->
+      </div>
+
+      <!-- Detay paneli -->
+      <div id="carDetails">
+        <img id="detailImage" src="" alt="Car Image" />
+        <p id="detailBrandModel"></p>
+        <p id="detailPrice"></p>
+        <p id="detailColor"></p>
+        <p id="detailTransmission"></p>
+        <p id="detailFuelType"></p>
+      </div>
+
+      <!-- Sayfa butonları -->
+      <div class="page-buttons">
+        <button onclick="prevPage()">Önceki Sayfa</button>
+        <button onclick="nextPage()">Sonraki Sayfa</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
